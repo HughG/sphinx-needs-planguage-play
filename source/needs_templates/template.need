@@ -1,0 +1,92 @@
+{# TODO: It would be nice to conditionally have a blank line after the "run-in heading", or not, depending on whether
+the value was multi-line or not. #}
+
+{# TODO: Automatically derive all these sections from a list and a loop. #}
+
+{# TODO: Divide the parts into sections, but only show sections if at least one of the fields in that section is
+present. #}
+
+
+{% if content %}
+**Description:**
+
+{{content}}
+{% endif %}
+
+{% if qualifiers %}
+**Qualifiers:**
+
+{% for link in qualifiers %}
+* :need:`[[copy('id', '{{link}}')]]`: [[copy('title', '{{link}}')]]
+{% endfor %}
+
+{% endif %}
+
+{% if qualities %}
+**Qualities:**
+
+{% for link in qualities %}
+* :need:`[[copy('id', '{{link}}')]]`: [[copy('title', '{{link}}')]]
+{% endfor %}
+
+{% endif %}
+
+{% if functions %}
+**Sub-Functions:**
+
+{% for link in functions %}
+* :need:`[[copy('id', '{{link}}')]]`: [[copy('title', '{{link}}')]]
+{% endfor %}
+
+{% endif %}
+
+{% if related %}
+**Related:**
+
+{% for link in related %}
+* :need:`[[copy('id', '{{link}}')]]`: [[copy('title', '{{link}}')]]
+{% endfor %}
+
+{% endif %}
+
+{% if design_constraints %}
+**Design Constraints:**
+
+{% for link in design_constraints %}
+* :need:`[[copy('id', '{{link}}')]]`: [[copy('title', '{{link}}')]]
+{% endfor %}
+
+{% endif %}
+
+{% if tests %}
+**Tests:**
+
+{{ tests }}
+{% endif %}
+
+{% if rationale %}
+**Rationale:**
+
+{{ rationale }}
+{% endif %}
+
+{% if issues %}
+**Issues:**
+
+{{ issues }}
+{% endif %}
+
+{% if priority %}
+**Priority:**
+
+{{ priority }}
+{% endif %}
+
+{% if design_ideas %}
+**Design ideas:**
+
+{% for link in design_ideas %}
+* :need:`[[copy('id', '{{link}}')]]`: [[copy('title', '{{link}}')]]
+{% endfor %}
+
+{% endif %}

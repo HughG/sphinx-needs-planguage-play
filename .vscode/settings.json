@@ -1,0 +1,6 @@
+{
+    "esbonio.sphinx.confDir": "",
+    "sphinx-needs.needsJson": "build/needs/needs.json",
+    "sphinx-needs.srcDir": "source",
+    "sphinx-needs.trace.server": "verbose"
+}

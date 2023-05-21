@@ -1,0 +1,4 @@
+{# This copy of the ID will be INvisible but linkable a section heading. #}
+.. rst-class:: needs-planguage-id-heading
+{{ type_prefix }}{{ id }}
+''''
